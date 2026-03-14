@@ -71,8 +71,10 @@ A demo dataset is provided to test teh code functinality through the "reduced" p
 *a) Run models described in the manuscript.*
 Open the script “Run_models.R” in R, making sure to 1) set up the correct working directory 2) replicate the same folder structure provided in Table 1. The script “Run_models.R” provides different pipelines for 1) the full vs. the demo dataset and 2) each model.
 After having loaded the packages needed, select the model of interest, source the R file compiling the data for analysis (sub-folder “R_code”) and run the Stan model (subfolder “Stan_models"). For each model the rstan package returns the results as stanfit object which can be used to inspect and extract results using functions like print (summary of posterior distribution for each estimated parameter).
+
 *b) Run model selection process.*
 Open the script “Run_model_selection.R” in R, making sure to 1) set up the correct working directory 2) replicate the same folder structure provided in Table 1. For the submodels assessing i) consumption probability and ii) frequency of consumption, the script “Run_models_selection.R” assess overfitting (pairs plot) and predictive power (ELPD) of the full model with and without a spatial autocorrealtion component (Gaussian process). For the submodel investigating iii) quantity of wildmeat consumed, the script only assesses overfitting and predictive power of the full model (with continuous covariates) against a null model (with only random factors).
+
 *c) Create figures and extract vlaues used to draw maps.*
 Download the model results at https://doi.org/10.5281/zenodo.19021125O and save them in the subfolder "Results". Open the script "Create_figs_Extract_map_values.R" in R making sure to 1) set up the correct working directory 2) replicate the same folder structure provided in Table 1. Source the codes to draw figure and extract values needed to reproduce the maps shown in the paper. Files storing previously extracted predicted values are available in the subfolder "Results".
 ### Simulation
